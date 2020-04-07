@@ -30,6 +30,11 @@ Today's class will be based on [Chapter 12: "Multiple Regression"](https://david
 
 
 
+```{r}
+model_1 <- lm(earnings ~ faculty + sat, data = x)
+```
+
+
 ### Scene 3
 
 **Prompt:** Visualize the relationships between the outcome variable (`earnings`) and the two key numerical explanatory variables (`faculty` and `sat`), one at a time. Create a ggplot for each showing the line of best fit.
@@ -37,7 +42,7 @@ Today's class will be based on [Chapter 12: "Multiple Regression"](https://david
 
 ### Scene 4
 
-**Prompt:** Now let's quantify these relationships between the two explanatory variables and the outcome variable. Fit a multiple gression model for `earnings` using `sat` and `faculty`. Write a bullet point interpreting each of the three values in the estimate column.
+**Prompt:** Now let's quantify these relationships between the two explanatory variables and the outcome variable. Fit a multiple gression model for `earnings` using `sat` and `faculty` as the two . Write a bullet point interpreting each of the three values in the estimate column. Do not use any interaction terms (yet).
 
 
 ### Scene 5
@@ -50,23 +55,8 @@ Today's class will be based on [Chapter 12: "Multiple Regression"](https://david
 **Prompt:** Let's make predictions based on our regression model for two schools, School A and School B with different average faculty salaries. What would each school's students' median earnings be under different average SAT scores?
 
 ```{r, echo=FALSE}
-# fill in the values here to display in the table
 
-tibble(`Subject` = c("School A", "School B"),
-       `Avg. Faculty Salary` = c("$50,000$", "$60,000$"),
-       `$Y_{sat = 1400}$` = c("$50,931$", "$?$"),
-       `$Y_{sat = 1300}$` = c("$?$", "$52,333$")) %>%
-  
-  # Then, we use the kable function to make it pretty
-  
-  kable() %>%
-  kable_styling(bootstrap_options = "striped",
-                full_width = FALSE,
-                position = "left") %>%
-  column_spec(1,
-              bold = TRUE,
-              border_right = TRUE)
-
+- 2590.9829 +      (0.3854 * 50000)  +     (24.4804 * 1300)
 ```
 
 
