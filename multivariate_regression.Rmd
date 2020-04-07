@@ -1,0 +1,11 @@
+---
+title: "class-2020-04-07"
+author: "Taylor Greenberg Goldy"
+date: "4/7/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
